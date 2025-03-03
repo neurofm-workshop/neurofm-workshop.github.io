@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSYNE 2025 Workshop - Building a foundation model for the brain</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-nav mx-auto">
+                <a class="nav-link" href="#abstract">Abstract</a>
+                <a class="nav-link" href="#speakers">Speakers</a>
+                <a class="nav-link" href="#organizers">Organizers</a>
+                <a class="nav-link" href="#goals">Goals</a>
+                <a class="nav-link" href="#schedule">Schedule</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="py-5 header-extra-padding text-center">
+        <div id="brain-container"></div>
+        <div class="container position-relative">
+            <h1 class="display-3 workshop-title">
+                <div class="title-main">Building a foundation model for the brain</div>
+                <div class="title-subtitle">
+                    <span class="highlight-datasets">datasets</span><span class="comma">,</span> <span
+                        class="highlight-theory">theory</span><span class="comma">,</span> and <span
+                        class="highlight-models">models</span>
+                </div>
+                <div class="title-workshop">Workshop</div>
+            </h1>
+            <p class="lead">March 31 - April 1, 2025 | COSYNE | Mont Tremblant, Canada</p>
+        </div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <p class="lead">
+                        Advances in neurotechnology have enabled collection of large-scale neural recordings during
+                        animal behavior. To extract insights from these datasets, researchers are now faced with
+                        significant challenges when comparing data across different brain regions, subjects, and tasks.
+                        Inspired by recent successes in large-scale "foundation" modeling of natural language and
+                        computational biology, there has been a push towards developing "neurofoundation" models that
+                        can be trained across diverse datasets and then fine-tuned for downstream tasks and analyses
+                        including neural encoding, decoding, cell-type classification, and activity prediction. In this
+                        workshop, we aim to provide an overview of current neurofoundation model approaches and to bring
+                        together experimentalists, theoreticians, and model builders to discuss how this paradigm can
+                        lead to a deeper understanding of the brain. In particular, we plan to highlight the utility of
+                        neurofoundation models in analyses across recording modalities, brain regions, individuals,
+                        species, and contexts. In addition to these talks, we will also host a panel to discuss
+                        challenges, opportunities, and risks of building these models.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Speakers</h2>
+            <div class="row" id="speakers-row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Eva Dyer">
+                        <div class="card-body">
+                            <h5 class="card-title">Eva Dyer</h5>
+                            <p class="card-text">Georgia Tech</p>
+                            <a href="https://dyerlab.gatech.edu/" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Blake Richards">
+                        <div class="card-body">
+                            <h5 class="card-title">Blake Richards</h5>
+                            <p class="card-text">McGill University, Mila</p>
+                            <a href="https://sites.google.com/mila.quebec/richards-lab/home" class="stretched-link"
+                                target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Andreas Tolias">
+                        <div class="card-body">
+                            <h5 class="card-title">Andreas Tolias</h5>
+                            <p class="card-text">Stanford University, Enigma Project</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Sophia Sanborn">
+                        <div class="card-body">
+                            <h5 class="card-title">Sophia Sanborn</h5>
+                            <p class="card-text">Stanford University, Enigma Project</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Gaëlle Chapuis">
+                        <div class="card-body">
+                            <h5 class="card-title">Gaëlle Chapuis</h5>
+                            <p class="card-text">International Brain Laboratory</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Saskia de Vries">
+                        <div class="card-body">
+                            <h5 class="card-title">Saskia de Vries</h5>
+                            <p class="card-text">Allen Institute</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Juan Gallego">
+                        <div class="card-body">
+                            <h5 class="card-title">Juan Gallego</h5>
+                            <p class="card-text">Imperial College London</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Patrick Mineault">
+                        <div class="card-body">
+                            <h5 class="card-title">Patrick Mineault</h5>
+                            <p class="card-text">Amaranth Foundation</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Chethan Pandarinath">
+                        <div class="card-body">
+                            <h5 class="card-title">Chethan Pandarinath</h5>
+                            <p class="card-text">Emory University, Georgia Tech</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Yizi Zhang">
+                        <div class="card-body">
+                            <h5 class="card-title">Yizi Zhang</h5>
+                            <p class="card-text">Columbia University</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Sabera Talukder">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabera Talukder</h5>
+                            <p class="card-text">Caltech</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Auguste Schulz">
+                        <div class="card-body">
+                            <h5 class="card-title">Auguste Schulz</h5>
+                            <p class="card-text">University of Tübingen</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Josué Ortega Caro">
+                        <div class="card-body">
+                            <h5 class="card-title">Josué Ortega Caro</h5>
+                            <p class="card-text">Yale University</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Marvin Mathony">
+                        <div class="card-body">
+                            <h5 class="card-title">Marvin Mathony</h5>
+                            <p class="card-text">Helmholtz Institute for Human-Centered AI</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="David Sussillo">
+                        <div class="card-body">
+                            <h5 class="card-title">David Sussillo</h5>
+                            <p class="card-text">Meta, Stanford University</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Ayesha Vermani">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayesha Vermani</h5>
+                            <p class="card-text">Champalimaud Centre for the Unknown</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Joel Ye">
+                        <div class="card-body">
+                            <h5 class="card-title">Joel Ye</h5>
+                            <p class="card-text">Carnegie Mellon University</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 speaker-card">
+                        <img src="https://placehold.co/150" class="card-img-top" alt="Adam Calhoun">
+                        <div class="card-body">
+                            <h5 class="card-title">Adam Calhoun</h5>
+                            <p class="card-text">Meta</p>
+                            <a href="#" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Organizers</h2>
+            <div class="row" id="organizers-row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/mehdi.jpg" class="card-img-top" alt="Mehdi Azabou">
+                        <div class="card-body">
+                            <h5 class="card-title">Mehdi Azabou</h5>
+                            <p class="card-text">Columbia University, ARNI</p>
+                            <a href="https://mehai.dev" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/cole.png" class="card-img-top" alt="Cole Hurwitz">
+                        <div class="card-body">
+                            <h5 class="card-title">Cole Hurwitz</h5>
+                            <p class="card-text">Columbia University</p>
+                            <a href="https://colehurwitz.github.io/" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/nanda.jpg" class="card-img-top" alt="Nanda H Krishna">
+                        <div class="card-body">
+                            <h5 class="card-title">Nanda H Krishna</h5>
+                            <p class="card-text">Mila</p>
+                            <a href="https://nandahkrishna.com/" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/avery.jpg" class="card-img-top" alt="Avery Hee-Woon Ryoo">
+                        <div class="card-body">
+                            <h5 class="card-title">Avery Hee-Woon Ryoo</h5>
+                            <p class="card-text">Mila</p>
+                            <a href="https://averyryoo.github.io/" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/eva.png" class="card-img-top" alt="Eva Dyer">
+                        <div class="card-body">
+                            <h5 class="card-title">Eva Dyer</h5>
+                            <p class="card-text">Georgia Tech</p>
+                            <a href="https://dyerlab.gatech.edu/" class="stretched-link" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 organizer-card">
+                        <img src="assets/blake.png" class="card-img-top" alt="Blake Richards">
+                        <div class="card-body">
+                            <h5 class="card-title">Blake Richards</h5>
+                            <p class="card-text">McGill University, Mila</p>
+                            <a href="https://www.mcgill.ca/neuro/blake-richards-phd" class="stretched-link"
+                                target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="goals" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Goals of the workshop</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <p class="lead mt-4">
+                        This workshop will bring together experts who are at the forefront of neuro-foundation model
+                        research. Our goal is to foster a much-needed dialogue between modelers, theorists, and
+                        experimentalists, providing a platform to explore the unique challenges, opportunities, and
+                        risks of creating foundation models for brain data. Participants will discuss the future of
+                        large-scale neural modeling through diverse perspectives, including:
+                    </p>
+
+                    <ul class="lead">
+                        <li>Cross-region: Exploring how neural activity across different brain regions
+                            and
+                            cell types can be jointly analyzed.</li>
+                        <li>Cross-animal and cross-species: Investigating common and unique neural signatures across
+                            individuals and species.</li>
+                        <li>Cross-task and cross-context: Understanding how neural activity adapts across different
+                            behaviors
+                            and environments.</li>
+                    </ul>
+
+                    <br>
+
+                    <p class="lead">
+                        In addition to these talks, we will host a panel discussion focused on the current landscape and
+                        future directions of neuro-foundation models. This discussion will delve into critical topics
+                        such as:
+                    </p>
+
+                    <ul class="lead">
+                        <li>The potential applications of foundation models for neural data</li>
+                        <li>Key challenges in developing generalizable models across diverse datasets</li>
+                        <li>Ethical considerations and risks of scaling these models</li>
+                    </ul>
+
+                    <br>
+
+                    <p class="lead">
+                        By bringing together diverse perspectives, this workshop will serve as a catalyst for
+                        identifying commonalities and differences in current approaches, highlighting how these models
+                        can generate new insights into brain function, and establishing a roadmap for this growing
+                        interdisciplinary field.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Schedule</h2>
+
+            <!-- Day 1 -->
+            <div class="day-container">
+                <h3 class="day-header">Day 1 - March 31, 2025</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-block">09:30 - 10:00</div>
+                        <div class="content-block">
+                            <h4>Opening Remarks</h4>
+                        </div>
+                        <div class="speaker-block">Cole Hurwitz, Mehdi Azabou</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">10:00 - 10:20</div>
+                        <div class="content-block">
+                            <h4>Scaling Up in Neuroscience: Lessons Learned</h4>
+                        </div>
+                        <div class="speaker-block">Eva Dyer</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">10:20 - 10:40</div>
+                        <div class="content-block">
+                            <h4>Large-scale brain decoding: taking advantage of physiological diversity</h4>
+                        </div>
+                        <div class="speaker-block">Blake Richards</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">10:40 - 11:10</div>
+                        <div class="content-block">
+                            <h4>Digital Twins of the Brain and Inception Loops: A New Paradigm for Neuroscience</h4>
+                        </div>
+                        <div class="speaker-block">Andreas Tolias</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">11:10 - 11:30</div>
+                        <div class="content-block">
+                            <h4>Coffee Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">11:30 - 11:50</div>
+                        <div class="content-block">
+                            <h4>Building a Functional Atlas of the Visual Brain</h4>
+                        </div>
+                        <div class="speaker-block">Sophia Sanborn</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">11:50 - 12:10</div>
+                        <div class="content-block">
+                            <h4>The International Brain Laboratory: The Brainwide Map and Beyond</h4>
+                        </div>
+                        <div class="speaker-block">Gaëlle Chapuis</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">12:10 - 12:30</div>
+                        <div class="content-block">
+                            <h4>Group Discussion</h4>
+                        </div>
+                        <div class="speaker-block">All Participants</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">12:30 - 15:30</div>
+                        <div class="content-block">
+                            <h4>Lunch Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">15:30 - 15:50</div>
+                        <div class="content-block">
+                            <h4>TBD</h4>
+                        </div>
+                        <div class="speaker-block">Saskia de Vries</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">15:50 - 16:10</div>
+                        <div class="content-block">
+                            <h4>Preserved neural dynamics underpin similar motor and cognitive computations across
+                                animals</h4>
+                        </div>
+                        <div class="speaker-block">Juan Gallego</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">16:10 - 16:40</div>
+                        <div class="content-block">
+                            <h4>Foundation models and NeuroAI safety: Opportunities and Pitfalls</h4>
+                        </div>
+                        <div class="speaker-block">Patrick Mineault</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">16:40 - 17:10</div>
+                        <div class="content-block">
+                            <h4>Coffee Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">17:10 - 18:30</div>
+                        <div class="content-block">
+                            <h4>Panel Discussion</h4>
+                        </div>
+                        <div class="speaker-block">All Speakers</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-container">
+                <h3 class="day-header">Day 2 - April 1, 2025</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-block">09:30 - 09:50</div>
+                        <div class="content-block">
+                            <h4>Opening Remarks</h4>
+                        </div>
+                        <div class="speaker-block">Nanda H Krishna, Avery Hee-Woon Ryoo</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">09:50 - 10:20</div>
+                        <div class="content-block">
+                            <h4>Neural Population Structure and Complexity in High Channel Count, Multi-Task Recordings
+                            </h4>
+                        </div>
+                        <div class="speaker-block">Chethan Pandarinath</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">10:20 - 10:40</div>
+                        <div class="content-block">
+                            <h4>Building brain-wide models at single-cell, single-spike resolution</h4>
+                        </div>
+                        <div class="speaker-block">Yizi Zhang</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">10:40 - 11:00</div>
+                        <div class="content-block">
+                            <h4>Time Series Foundation Models: Tokenization and Beyond</h4>
+                        </div>
+                        <div class="speaker-block">Sabera Talukder</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">11:00 - 11:30</div>
+                        <div class="content-block">
+                            <h4>Coffee Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">11:30 - 11:50</div>
+                        <div class="content-block">
+                            <h4>Deep generative models for linking neural spiking activity and behavior</h4>
+                        </div>
+                        <div class="speaker-block">Auguste Schulz</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">11:50 - 12:10</div>
+                        <div class="content-block">
+                            <h4>BrainLM and Beyond: Foundation Models for Understanding Brain Dynamics</h4>
+                        </div>
+                        <div class="speaker-block">Josué Ortega Caro</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">12:10 - 12:30</div>
+                        <div class="content-block">
+                            <h4>Towards a Foundation Model of Cognitive Modeling</h4>
+                        </div>
+                        <div class="speaker-block">Marvin Mathony</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">12:30 - 15:30</div>
+                        <div class="content-block">
+                            <h4>Lunch Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">15:30 - 16:00</div>
+                        <div class="content-block">
+                            <h4>Brain-wide population dynamics of decision-making under uncertainty</h4>
+                        </div>
+                        <div class="speaker-block">David Sussillo</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">16:00 - 16:20</div>
+                        <div class="content-block">
+                            <h4>Meta-dynamical state space models for integrative neural data analysis</h4>
+                        </div>
+                        <div class="speaker-block">Ayesha Vermani</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">16:20 - 16:40</div>
+                        <div class="content-block">
+                            <h4>A generalist model for intracortical motor brain-computer interfaces</h4>
+                        </div>
+                        <div class="speaker-block">Joel Ye</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">16:40 - 17:00</div>
+                        <div class="content-block">
+                            <h4>A generic noninvasive neuromotor interface for human-computer interaction</h4>
+                        </div>
+                        <div class="speaker-block">Adam Calhoun</div>
+                    </div>
+
+                    <div class="timeline-item break">
+                        <div class="time-block">17:00 - 17:30</div>
+                        <div class="content-block">
+                            <h4>Coffee Break</h4>
+                        </div>
+                        <div class="speaker-block"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-block">17:30 - 18:30</div>
+                        <div class="content-block">
+                            <h4>Panel Discussion</h4>
+                        </div>
+                        <div class="speaker-block">All Speakers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Affiliation Icons -->
+    <footer class="py-4 bg-black text-white">
+        <div class="container text-center">
+            <div class="logo-container">
+                <a href="https://arni-institute.org/" target="_blank" class="logo-link">
+                    <img src="assets/arni.png" alt="ARNI" class="logo-img">
+                </a>
+                <a href="https://www.columbia.edu" target="_blank" class="logo-link">
+                    <img src="assets/columbia.png" alt="Columbia University" class="logo-img">
+                </a>
+                <a href="https://www.gatech.edu" target="_blank" class="logo-link">
+                    <img src="assets/gatech.png" alt="Georgia Tech" class="logo-img">
+                </a>
+                <a href="https://www.umontreal.ca" target="_blank" class="logo-link">
+                    <img src="assets/udem.png" alt="UdeM" class="logo-img">
+                </a>
+                <a href="https://mila.quebec" target="_blank" class="logo-link">
+                    <img src="assets/mila.png" alt="Mila" class="logo-img">
+                </a>
+            </div>
+            <p class="mt-4 mb-0">&copy; 2025 Mehdi Azabou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script src="brain.js"></script>
+</body>
+
+</html>
