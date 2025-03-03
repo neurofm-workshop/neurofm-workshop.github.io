@@ -67,6 +67,10 @@ function initBrain() {
     const colors = new Float32Array(count * 3);
 
     // Return to vibrant colors (cyan, pink, yellow)
+    // const colorA = new THREE.Color(0xff8cc6); // Light brain pink
+    // const colorB = new THREE.Color(0xff8cc6); // Medium brain pink 
+    // const colorC = new THREE.Color(0xff6699); // Deep brain pink
+
     const colorA = new THREE.Color(0x1acbcb); // Cyan
     const colorB = new THREE.Color(0xe5197e); // Pink
     const colorC = new THREE.Color(0xe6cc18); // Yellow
