@@ -515,3 +515,43 @@ footer p {
         height: 50px;
     }
 }
+
+.bsky-link {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 132, 255, 0.2);
+    border-radius: 6px;
+    margin-left: 15px;
+    padding: 6px 12px !important;
+    transition: background-color 0.3s ease;
+}
+
+.bsky-link:hover {
+    background-color: rgba(0, 132, 255, 0.4);
+}
+
+.bsky-link span {
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.bsky-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #0084FF;
+}
+
+@media (max-width: 768px) {
+    .bsky-link {
+        margin-left: 8px;
+        padding: 4px 8px !important;
+    }
+
+    .bsky-link span {
+        font-size: 0.8rem;
+    }
+
+    .bsky-icon {
+        font-size: 16px;
+    }
+}
