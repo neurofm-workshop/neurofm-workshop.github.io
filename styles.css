@@ -459,6 +459,13 @@ section:not(header) {
 
 footer.bg-black {
     background-color: #000000 !important;
+    width: 100%;
+}
+
+footer .container {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 footer .fa-3x {
@@ -479,17 +486,20 @@ footer p {
 
 .logo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1.5rem;
     margin: 0 auto;
     width: 100%;
+    max-width: 100%;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
+    margin-bottom: 0.5rem;
 }
 
 .logo-img {
