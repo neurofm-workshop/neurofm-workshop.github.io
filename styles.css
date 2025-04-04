@@ -425,7 +425,9 @@ section:not(header) {
 #schedule h2,
 #speakers h2,
 #goals h2,
-#organizers h2 {
+#organizers h2,
+#videos h2,
+#abstract h2 {
     font-size: 2.4rem;
     font-weight: 600;
     color: #1a1a1a;
@@ -437,7 +439,9 @@ section:not(header) {
 #schedule h2::after,
 #speakers h2::after,
 #goals h2::after,
-#organizers h2::after {
+#organizers h2::after,
+#videos h2::after,
+#abstract h2::after {
     content: '';
     position: absolute;
     bottom: -1rem;
@@ -656,5 +660,410 @@ footer p {
     #goals .lead {
         font-size: 1.05rem;
         line-height: 1.6;
+    }
+}
+
+/* Multi-carousel styles */
+.multi-carousel .carousel-inner {
+    display: flex;
+    overflow-x: visible;
+}
+
+.multi-carousel .carousel-item {
+    margin-right: 0;
+    flex: 0 0 auto;
+    width: 80%;
+    transition: transform 0.6s ease-in-out;
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+.multi-carousel .carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.multi-carousel .carousel-item-next,
+.multi-carousel .carousel-item-prev {
+    position: relative;
+    z-index: 1;
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
+.multi-carousel .carousel-item-next {
+    transform: translateX(20%) scale(0.8);
+}
+
+.multi-carousel .carousel-item-prev {
+    transform: translateX(-20%) scale(0.8);
+}
+
+.multi-carousel .carousel-control-prev,
+.multi-carousel .carousel-control-next {
+    width: 10%;
+    z-index: 3;
+}
+
+/* Rounded video containers */
+.rounded-video {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-video iframe {
+    border-radius: 12px;
+}
+
+/* Custom Video Carousel */
+.video-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+.video-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 620px;
+    overflow: visible;
+}
+
+.video-item {
+    position: absolute;
+    width: 80%;
+    max-width: 1000px;
+    transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 0;
+    z-index: 0;
+}
+
+.video-item.active {
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0) scale(1);
+}
+
+.video-item.prev {
+    opacity: 0.5;
+    z-index: 1;
+    transform: translateX(-65%) scale(0.75);
+}
+
+.video-item.next {
+    opacity: 0.5;
+    z-index: 1;
+    transform: translateX(65%) scale(0.75);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.video-item.active .video-wrapper {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-title {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.2s;
+}
+
+.video-speaker {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.3s;
+}
+
+.video-item.active .video-title,
+.video-item.active .video-speaker {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modern, floating control buttons positioned on the sides */
+.control-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: white;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.prev-btn {
+    left: 2%;
+}
+
+.next-btn {
+    right: 2%;
+}
+
+.control-btn:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.control-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* SVG styling inside buttons */
+.control-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.control-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Indicators container at bottom */
+.video-indicators-container {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.video-indicators {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+}
+
+.indicator {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #333333;
+    width: 40px;
+}
+
+.indicator:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .video-item.active {
+        width: 85%;
+    }
+
+    .video-carousel {
+        height: 560px;
+    }
+
+    .control-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+    .video-item.active {
+        width: 90%;
+    }
+
+    .video-carousel {
+        height: 520px;
+    }
+
+    .control-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .control-btn svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-item.active {
+        width: 95%;
+    }
+
+    .video-carousel {
+        height: 480px;
+    }
+
+    .video-item.prev,
+    .video-item.next {
+        display: none;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .control-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .indicator {
+        width: 24px;
+        height: 3px;
+    }
+
+    .indicator.active {
+        width: 32px;
+    }
+}
+
+#abstract h2 {
+    margin-bottom: 2.5rem;
+}
+
+.youtube-link {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-left: 15px;
+    padding: 6px 12px !important;
+    transition: background-color 0.3s ease;
+}
+
+.youtube-link:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.youtube-link span {
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.youtube-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #FF0000;
+}
+
+@media (max-width: 768px) {
+
+    .youtube-link,
+    .bsky-link {
+        margin-left: 8px;
+        padding: 4px 8px !important;
+    }
+
+    .youtube-link span,
+    .bsky-link span {
+        font-size: 0.8rem;
+    }
+
+    .youtube-icon,
+    .bsky-icon {
+        font-size: 16px;
+    }
+}
+
+/* Add vertical spacing for extra small screens */
+@media (max-width: 576px) {
+    .youtube-link {
+        margin-top: 10px;
+    }
+
+    .navbar-dark .navbar-nav {
+        gap: 8px;
+    }
+}
+
+/* Button group to keep social buttons together */
+.button-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .button-group {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .bsky-link,
+    .youtube-link {
+        margin-left: 0;
+        /* Remove left margin when in button group */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-dark .navbar-nav {
+        gap: 8px;
+    }
+
+    /* Keep buttons same width on very small screens */
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bsky-link,
+    .youtube-link {
+        width: 100%;
+        justify-content: center;
     }
 }
