@@ -939,8 +939,12 @@ footer p {
         width: 95%;
     }
 
+    .video-carousel-container {
+        padding: 20px 0 40px;
+    }
+
     .video-carousel {
-        height: 480px;
+        height: 400px;
     }
 
     .video-item.prev,
@@ -965,6 +969,40 @@ footer p {
 
     .indicator.active {
         width: 32px;
+    }
+
+    .video-wrapper {
+        margin-bottom: 8px;
+    }
+
+    .video-title {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    .video-speaker {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 576px) {
+    .video-carousel-container {
+        padding: 15px 0 30px;
+    }
+
+    .video-carousel {
+        height: 350px;
+    }
+
+    /* Move control buttons slightly up for better positioning */
+    .control-btn {
+        top: 35%;
+    }
+
+    .navbar-dark .navbar-nav {
+        gap: 8px;
     }
 }
 
